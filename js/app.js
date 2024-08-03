@@ -34,7 +34,7 @@ calcBtn.addEventListener("click", () => {
     if (finalResult === Infinity) {
       throw new Error("division by 0");
     }
-    result.textContent = finalResult | 0;
+    result.textContent = finalResult ? finalResult : "0";
     display.value = display.value.replace("**", "^");
   } catch (error) {
     if (error.message === "division by 0") {
